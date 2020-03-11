@@ -77,7 +77,10 @@ for encoding in encodings:
 	# update the list of names
 	names.append(name)
 
-print("Names ",names)
+if len(names)>1:
+    print("Authorixed")
+else:
+    print("Unauthorized")
 # loop over the recognized faces
 for ((top, right, bottom, left), name) in zip(boxes, names):
 	# draw the predicted face name on the image
